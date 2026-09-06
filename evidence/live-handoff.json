@@ -1,0 +1,136 @@
+{
+  "testedAt": "2026-09-06T11:19:17.017Z",
+  "path": "Local HTTP API to Lambda to Amazon Bedrock to D1",
+  "draft": {
+    "id": "eca8c46a-1ff9-402b-bd80-647ff7018685",
+    "owner": "adult-a",
+    "title": "Synthetic live test: repair visit at 4 PM; Alex is away and Sam may be available.",
+    "version": 2,
+    "state": "draft",
+    "responsible": null,
+    "proposal": {
+      "recipient": "adult-b",
+      "expires": 1788695356925
+    },
+    "audit": [
+      {
+        "event": "proposed",
+        "actor": "adult-a",
+        "at": "2026-09-06T11:19:16.925Z",
+        "version": 2
+      }
+    ],
+    "suggestion": {
+      "recipient": "adult-b",
+      "reason": "Available at home for the repair visit at 4 PM.",
+      "trace": [
+        {
+          "tool": "get_task",
+          "result": {
+            "id": "eca8c46a-1ff9-402b-bd80-647ff7018685",
+            "title": "Synthetic live test: repair visit at 4 PM; Alex is away and Sam may be available.",
+            "version": 1
+          }
+        },
+        {
+          "tool": "list_availability",
+          "result": {
+            "calendars": [
+              {
+                "actor": "adult-a",
+                "available": false,
+                "detail": "Away at work during the repair visit."
+              },
+              {
+                "actor": "adult-b",
+                "available": true,
+                "detail": "Available at home, subject to explicit acceptance."
+              }
+            ]
+          }
+        },
+        {
+          "tool": "propose_handoff",
+          "result": {
+            "recipient": "adult-b"
+          }
+        }
+      ],
+      "model": "amazon.nova-lite-v1:0",
+      "simulation": true,
+      "mode": "bedrock"
+    }
+  },
+  "accepted": {
+    "id": "eca8c46a-1ff9-402b-bd80-647ff7018685",
+    "owner": "adult-a",
+    "title": "Synthetic live test: repair visit at 4 PM; Alex is away and Sam may be available.",
+    "version": 4,
+    "state": "accepted",
+    "responsible": "adult-b",
+    "proposal": {
+      "recipient": "adult-b",
+      "expires": 1788695356925
+    },
+    "audit": [
+      {
+        "event": "proposed",
+        "actor": "adult-a",
+        "at": "2026-09-06T11:19:16.925Z",
+        "version": 2
+      },
+      {
+        "event": "owner_approved",
+        "actor": "adult-a",
+        "at": "2026-09-06T11:19:16.968Z",
+        "version": 3
+      },
+      {
+        "event": "recipient_accepted",
+        "actor": "adult-b",
+        "at": "2026-09-06T11:19:17.009Z",
+        "version": 4
+      }
+    ],
+    "suggestion": {
+      "recipient": "adult-b",
+      "reason": "Available at home for the repair visit at 4 PM.",
+      "trace": [
+        {
+          "tool": "get_task",
+          "result": {
+            "id": "eca8c46a-1ff9-402b-bd80-647ff7018685",
+            "title": "Synthetic live test: repair visit at 4 PM; Alex is away and Sam may be available.",
+            "version": 1
+          }
+        },
+        {
+          "tool": "list_availability",
+          "result": {
+            "calendars": [
+              {
+                "actor": "adult-a",
+                "available": false,
+                "detail": "Away at work during the repair visit."
+              },
+              {
+                "actor": "adult-b",
+                "available": true,
+                "detail": "Available at home, subject to explicit acceptance."
+              }
+            ]
+          }
+        },
+        {
+          "tool": "propose_handoff",
+          "result": {
+            "recipient": "adult-b"
+          }
+        }
+      ],
+      "model": "amazon.nova-lite-v1:0",
+      "simulation": true,
+      "mode": "bedrock"
+    }
+  }
+}
