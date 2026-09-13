@@ -27,3 +27,5 @@ Eight local tests pass: six policy checks and two HTTP workflows. These cover ex
 Original project work began September 6, 2026. Runtime scaffold and UI primitives come from Sites, React and shadcn; their licenses remain applicable. The Lambda template was adapted from this workspace's ListingProof deployment structure; HomeRelay's tool loop, state machine and interface are separate work. MIT license applies to original source.
 
 Live evidence: `evidence/live-handoff.json` records a successful local HTTP → Lambda → Bedrock → D1 run, including all three model-selected tools, draft state, owner approval and recipient acceptance. This is one synthetic integration check, not a model quality benchmark.
+
+September 13 evaluation: 20/20 development-authored paraphrases passed the live Bedrock tool trace and recipient check over one fixed synthetic availability scenario. See evidence/planner-evaluation-20260913.json. This is not a held-out benchmark or evidence of real household success. Run tests/live-planner.mjs only with deliberate live provider access; it is excluded from default tests.

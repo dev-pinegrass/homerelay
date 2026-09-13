@@ -1,0 +1,908 @@
+{
+  "testedAt": "2026-09-13T09:46:22.484Z",
+  "scope": "20 development-authored request paraphrases over one fixed synthetic availability scenario. Not held out; not an estimate of real household performance.",
+  "passed": 20,
+  "total": 20,
+  "rows": [
+    {
+      "title": "The repair visit moved to 4 PM. Who can be home?",
+      "status": 200,
+      "pass": true,
+      "durationMs": 4828,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "The repair visit has been moved to 4 PM and adult-b is available at home.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-1",
+              "title": "The repair visit moved to 4 PM. Who can be home?",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Can someone receive the plumber while Alex is at work?",
+      "status": 200,
+      "pass": true,
+      "durationMs": 2464,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "adult-b is available at home and can explicitly accept the task",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-2",
+              "title": "Can someone receive the plumber while Alex is at work?",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "A parcel needs someone at home this afternoon.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1817,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "To receive a parcel this afternoon.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-3",
+              "title": "A parcel needs someone at home this afternoon.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "The electrician is arriving during working hours.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 2132,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "The electrician is arriving during working hours.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-4",
+              "title": "The electrician is arriving during working hours.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Please help arrange who will greet the internet technician.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1757,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "To greet the internet technician.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-5",
+              "title": "Please help arrange who will greet the internet technician.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "I cannot be at home for the appliance repair appointment.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1876,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "To handle the household during the appliance repair appointment.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-6",
+              "title": "I cannot be at home for the appliance repair appointment.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "We need an adult available for the furniture delivery.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1804,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "Available at home for furniture delivery.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-7",
+              "title": "We need an adult available for the furniture delivery.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Who is free to answer the door for the maintenance visit?",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1745,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "Available at home for the maintenance visit.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-8",
+              "title": "Who is free to answer the door for the maintenance visit?",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Find a household member available to receive a delivery.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1794,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "Available at home and subject to explicit acceptance.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-9",
+              "title": "Find a household member available to receive a delivery.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "The washing machine engineer has changed the appointment.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1775,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "The washing machine engineer has changed the appointment.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-10",
+              "title": "The washing machine engineer has changed the appointment.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Alex has a work conflict. Suggest who could cover the home visit.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1785,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "Alex has a work conflict and cannot cover the home visit.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-11",
+              "title": "Alex has a work conflict. Suggest who could cover the home visit.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Please suggest a handoff, but wait for the recipient to accept.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1783,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "Adult-b is available and at home, subject to explicit acceptance.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-12",
+              "title": "Please suggest a handoff, but wait for the recipient to accept.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Can you help with the meter inspection while I am away?",
+      "status": 200,
+      "pass": true,
+      "durationMs": 2806,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "To help with the meter inspection while the person is away.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-13",
+              "title": "Can you help with the meter inspection while I am away?",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Someone needs to let the authorised repair technician in.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1641,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "To let the authorized repair technician in.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-14",
+              "title": "Someone needs to let the authorised repair technician in.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Find a replacement for the afternoon household appointment.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 2172,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "Find a replacement for the afternoon household appointment.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-15",
+              "title": "Find a replacement for the afternoon household appointment.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "I need help covering a scheduled home maintenance appointment.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1992,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "To cover a scheduled home maintenance appointment.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-16",
+              "title": "I need help covering a scheduled home maintenance appointment.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "The new delivery slot conflicts with work. What is an option?",
+      "status": 200,
+      "pass": true,
+      "durationMs": 2064,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "The new delivery slot conflicts with work. What is an option?",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-17",
+              "title": "The new delivery slot conflicts with work. What is an option?",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Suggest who may be at home, without sending any invitations.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1745,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "adult-b is available at home",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-18",
+              "title": "Suggest who may be at home, without sending any invitations.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "We need a proposal for covering the air-conditioner service.",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1812,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "adult-b is available at home and can cover the air-conditioner service.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-19",
+              "title": "We need a proposal for covering the air-conditioner service.",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    },
+    {
+      "title": "Who can take responsibility for being home for the repair visit?",
+      "status": 200,
+      "pass": true,
+      "durationMs": 1901,
+      "result": {
+        "recipient": "adult-b",
+        "reason": "adult-b is available at home and can accept the responsibility for the repair visit.",
+        "trace": [
+          {
+            "tool": "get_task",
+            "result": {
+              "id": "synthetic-eval-20",
+              "title": "Who can take responsibility for being home for the repair visit?",
+              "version": 1
+            }
+          },
+          {
+            "tool": "list_availability",
+            "result": {
+              "calendars": [
+                {
+                  "actor": "adult-a",
+                  "available": false,
+                  "detail": "At work."
+                },
+                {
+                  "actor": "adult-b",
+                  "available": true,
+                  "detail": "At home, subject to explicit acceptance."
+                }
+              ]
+            }
+          },
+          {
+            "tool": "propose_handoff",
+            "result": {
+              "recipient": "adult-b"
+            }
+          }
+        ],
+        "model": "amazon.nova-lite-v1:0",
+        "simulation": true
+      }
+    }
+  ]
+}
